@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>Assignment 4: Shaders</title>
+    <link rel="stylesheet" type="text/css" href="./assets/common.css" media="screen" />
+    <script src="./utils/throttle.js"></script>
+    <meta charset="UTF-8">
+</head>
+<body >
+    <div class="description">
+        Shaders, shaders everywhere!
+    </div>
+    <div>Pick a shader effect: 
+        <button id="effect1" class="button" onclick="onEffect1();">CheckerBoard</button>		
+        <button id="effect2" class="button" onclick="onEffect2();">Swiss Cheese</button>		
+        <button id="effect3" class="button" onclick="onEffect3();">Warble</button>		
+        <button id="effect4" class="button" onclick="onEffect4();">Effect 4</button>		
+    </div>
+
+    <div>
+        <p>Effect 1: CheckerBoard: Based on the slider, it will create a checkerboard ranging from a 5x5 to 20 x20 </p>
+        <p>Effect 2: Swiss Cheese: Based on the slider, it will create holes in the image that becomes bigger the higher the value of the slider is</p>
+        <p>Effect 3: Warble: Will create waves in the image & adjust the surface normal to account for the shadows</p>
+    </div>
+           
+    <div>
+        <label for="number">Number (0..1): </label>
+        <input id="number" type="range" name="number" min="0" max="1" value="0.2" step="0.05">
+    </div>
+    <div id="drawing"></div>
+
+<script type="module" src="./src/app.ts"></script>
+</body>
+</html>
